@@ -46,12 +46,18 @@ Create `~/.local/share/applications/thelounge.desktop`:
 
 ```desktop
 [Desktop Entry]
+Version=1.0
 Name=The Lounge
-Exec=/path/to/thelounge-native-linux-app/start.sh
+Comment=IRC Web Client
+Exec=/path/to/thelounge-native-linux-app/node_modules/.bin/electron /path/to/thelounge-native-linux-app --ozone-platform=wayland
 Icon=/path/to/thelounge-native-linux-app/thelounge.png
 Type=Application
-Categories=Network;Chat;
+Categories=Network;Chat;IRCClient;
+StartupNotify=true
+StartupWMClass=thelounge-app
 ```
+
+For X11, remove the `--ozone-platform=wayland` flag.
 
 ## Contributing
 

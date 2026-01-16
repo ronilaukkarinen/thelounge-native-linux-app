@@ -1,12 +1,20 @@
-# The Lounge - Native Linux app
+<h1 align="center">
+	<img
+		width="300"
+		alt="The Lounge"
+		src="https://raw.githubusercontent.com/thelounge/thelounge/master/client/img/logo-vertical-transparent-bg.svg?sanitize=true">
+</h1>
 
-[![Built with Electron](https://img.shields.io/badge/Built_with-Electron-47848F?style=for-the-badge&logo=electron&logoColor=white)](https://electronjs.org)
-[![Linux](https://img.shields.io/badge/Linux-Arch_Linux-1793D1?style=for-the-badge&logo=archlinux&logoColor=white)](https://archlinux.org)
-[![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://forthebadge.com)
+<h3 align="center">
+	The Lounge - Native Linux app (unofficial)
+</h3>
+<div align="center">
+	<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+</div>
 
-A native Linux wrapper for [The Lounge](https://thelounge.chat/) IRC client with native desktop notifications and system integration.
+## Overview
 
-Looking for macOS? Check out [thelounge-native-mac-app](https://github.com/ronilaukkarinen/thelounge-native-mac-app).
+A native Linux wrapper for [The Lounge](https://thelounge.chat/) IRC client with native desktop notifications and system integration. Looking for macOS version? Check out [thelounge-native-mac-app](https://github.com/ronilaukkarinen/thelounge-native-mac-app).
 
 ## Features
 

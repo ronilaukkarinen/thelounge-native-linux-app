@@ -213,6 +213,22 @@ function createWindow() {
 
   });
 
+  // Zoom with Ctrl+Plus / Ctrl+Minus / Ctrl+0 (like a browser)
+  mainWindow.webContents.on('before-input-event', (event, input) => {
+    if (input.control && input.type === 'keyDown') {
+      if (input.key === '+' || input.key === '=') {
+        mainWindow.webContents.setZoomLevel(mainWindow.webContents.getZoomLevel() + 0.5);
+        event.preventDefault();
+      } else if (input.key === '-') {
+        mainWindow.webContents.setZoomLevel(mainWindow.webContents.getZoomLevel() - 0.5);
+        event.preventDefault();
+      } else if (input.key === '0') {
+        mainWindow.webContents.setZoomLevel(0);
+        event.preventDefault();
+      }
+    }
+  });
+
   mainWindow.on('close', saveWindowState);
   mainWindow.on('resize', saveWindowState);
   mainWindow.on('move', saveWindowState);
@@ -227,6 +243,7 @@ app.whenReady().then(() => {
       mainWindow.webContents.toggleDevTools();
     }
   });
+
 });
 
 app.on('window-all-closed', () => {
